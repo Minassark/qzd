@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content=" =device-width, initial-scale=1.0" />
+    <title>Reservia</title>
+
+    <!-- Script -->
+    <script src="https://kit.fontawesome.com/2e5e7c6a19.js" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./Style/styles.css" />
+  </head>
+
+  <body>
+     <!-- Section 1 : Nav -->
+    <div id ="wrapper">    
+
+      <header>
+        <img id="logo" src="./Assets/img-icons/Reservia.svg" alt="reservia-logo" />
+        <nav class="navbar-container">
+          <a href="#">Hébergements </a>
+          <a href="#">Activités</a>
+        </nav>
+        <a class="navbar-signup" href="#">S'inscrire</a>
+      </header>
+
+    <!-- Section 2 : Research -->
+
+      <div class= "research-headings">  <!-- Search Titles -->
+        <h1 class="searchTitle"> Trouvez votre hébergement pour des vacances de rêve </h1>
+        <p class="searchSubtitle"> En plein centre ville ou en pleine nature </p>
+      </div>
+    
+      <br>
+      
+      <form class="research-form"> <!-- Search bar-->
+        <div class="icon-location"> <i class="fas fa-map-marker-alt"> </i> </div>
+        <input type="text" type="research" placeholder= "Marseille, France" id= "research-input">
+        <button class="research-button">Rechercher</button>
+        <button class="research-button-icon"> <i class="fas fa-search"></i> </button>
+      </form>
+
+          <div class="research-filters">  <!-- filtres -->
+            <h2>Filtres</h2>
+            <ul class="filters-list">
+              <li><i class="fas fa-money-bill-wave icon-filters"></i>   <span> Economique </span> </li>
+              <li><i class="fas fa-child icon-filters"></i> <span> Familial </span>  </li>
+              <li><i class="fas fa-heart icon-filters"></i> <span> Romantique </span>  </li>
+              <li><i class="fas fa-dog icon-filters"></i> </i> <span> Animaux autorisés </span>  </li>
+            </ul>
+          </div>
+    
+        </div>
+    </body>
+  </html>

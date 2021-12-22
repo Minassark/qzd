@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap");
+
+/* ------------------ Global Settings --------------------------- */
+
+:root {
+  --blue: #297eff;
+  --lightgrey: #e9e9e9;
+  --lightblue: #adccfa;
+}
+
+* {
+  font-family: "Raleway", "sans-serif";
+  box-sizing: border-box; /* box aura la taille que je lui ai attribué car sinon margin/padding modifie la taille là il va les faire rentrer dedans */
+  margin: 0; /* beaucoup d'élément ont une margin naturelle et ca peut poser pb donc on reset tout */
+  padding: 0;
+}
+
+a,
+a:visited {/* s'hérite du parent, par défaut noir */
+  color: inherit; 
+  text-decoration: none;
+}
+
+button, input, ul {
+border:none;
+background-color: none;
+list-style-type: none;
+}
+
+
+/* ----------------------- Section 1 - Nav --------------------- */
+
+#wrapper{
+  max-width: 1440px;
+  margin: auto;
+}
+
+header{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+header a {
+  padding: 30px;
+  border-top: 3px solid transparent;
+}
+
+header a:hover, a:focus{
+  border-top-color: var(--blue);
+  color:var(--blue);
+}
+
+#logo {
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+.navbar-signup, .navbar-signup:visited {
+  font-weight: bold;
+  color:var(--blue);
+}
+
+.navbar-container {
+  display: flex; /* contenu dans une div, par défaut applique flex:inline (prend taille du contenu) , or on veut qu'il se comporte comme les autres élément du nav: flex */
+  flex-wrap:wrap;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+
+  .navbar-container {
+    order: 1; /* par défaut flex order = 0 */
+    flex-basis: 100%;
+
+  }
+
+  .navbar-container a {
+    width: 50%;
+    text-align: center;
+    border-bottom: 3px solid rgb(248, 248, 248);
+  }
+
+  .navbar-container a:hover, a:focus{
+    border-top: none;
+    border-bottom-color: rgb(14, 14, 235);
+  }
+}
+
+/* ----------------------- Section 2 - Research --------------------- */
+
+.wrapper{
+  padding:1rem 2rem;
+  margin-left: 16px;
+  max-width: 1440px;
+}
+
+/* --- Search Titles -- */
+
+.research-headings{
+  margin-top:20px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* --- Search bar --*/
+
+.research-form {
+  display:flex;
+  flex-direction: row;
+}
+
+.icon-location {
+  background-color: var(--lightgrey);
+  padding: 1rem 1.3rem;
+  border-radius: 1rem 0 0 1rem ;
+}
+
+#research-input {
+  border-top: 1px solid var(--lightgrey);
+  border-bottom: 1px solid var(--lightgrey);
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#research-input::placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+.research-button{
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--blue);
+  border-radius: 0 1rem 1rem 0;
+  padding: 1rem 1rem 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.research-button-icon{
+  display:none;
+}
+
+@media (max-width: 768px) {
+  .research-button{
+    display:none;
+  }
+  .research-button-icon{
+    display:flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color:var(--lightgrey);
+    background-color: var(--blue);
+    border-radius: 0 1rem 1rem 0;
+    padding-top: 1rem;
+    flex-basis: 4rem;
+    cursor: pointer;
+  }
+}
+
+/* --- Filters--*/
+
+.research-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+h2 {
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filters-list {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.filters-list li {
+  border: solid 2px var(--lightgrey);
+  border-radius: 32px;
+  margin: 0 16px;
+}
+
+
+.filters-list span {
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.icon-filters {
+color: var(--blue);
+background-color: var(--lightblue);
+padding: 1rem;
+border-radius:100%;
+margin: -2px;
+}
